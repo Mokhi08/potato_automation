@@ -1,4 +1,4 @@
-@Regression
+@UPGNX10-251
 Feature: Login functionality
   User Story :
   As a user, I should be able to log in so that I can land on homepage.
@@ -12,7 +12,7 @@ Feature: Login functionality
     And user clicks the login button
     Then user should be on the homepage
 
-
+  @UPGNX10-245
   Scenario Outline: Positive login scenario (Users can log in with valid credentials)
     Given user is on the login page
     When user enters valid username "<validUsername>"
@@ -37,7 +37,7 @@ Feature: Login functionality
     And user clicks the login button
     Then user should see Wrong login/password message
 
-
+  @UPGNX10-246
   Scenario Outline: Negative login scenario ("Wrong login/password" message should be displayed for valid username-invalid password)
     Given user is on the login page
     When user enters valid username "<validUsername>"
@@ -62,7 +62,7 @@ Feature: Login functionality
     And user clicks the login button
     Then user should see Wrong login/password message
 
-
+  @UPGNX10-247
   Scenario Outline: Negative login scenario ("Wrong login/password" message should be displayed for invalid username-valid password)
     Given user is on the login page
     When user enters invalid username "<invalidUsername>"
@@ -79,7 +79,7 @@ Feature: Login functionality
       |   posmanager2@info.com                |     posmanager          |
       |   posmanager3@info.com                |     posmanager          |
 
-
+  @UPGNX10-249
     Scenario: "Please fill out this field" message should be displayed if the password or username is empty
       Given user is on the login page
       When username input box is empty
@@ -92,13 +92,13 @@ Feature: Login functionality
       Then user clicks login button
       Then user should see Please fill out this field message for empty password
 
-
+  @UPGNX10-248
       Scenario: User should see the password in bullet signs by default while typing (like ****)
         Given user is on the login page
         And user types password "salesmanager" into the password input box
         Then user should see bullet signs by default
 
-
+  @UPGNX10-250
         Scenario: Verify if the ‘Enter’ key of the keyboard is working correctly on the login page
           Given user is on the login page
           And user enters username "salesmanager55@info.com" and password "salesmanager"
