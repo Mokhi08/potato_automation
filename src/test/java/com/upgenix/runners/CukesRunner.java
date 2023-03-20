@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/upgenix/step_definitions",
         dryRun = false,
-        tags = "@Regression",
+        tags = "@UPGNX10-251",
         publish = false
 
 
