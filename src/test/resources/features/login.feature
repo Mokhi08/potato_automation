@@ -1,4 +1,4 @@
-@regression
+
 Feature: Login functionality
   User Story :
   As a user, I should be able to log in so that I can land on homepage.
